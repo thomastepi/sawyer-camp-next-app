@@ -1,0 +1,40 @@
+.info-window {
+  max-width: 240px;
+  color: #87a922;
+}
+
+.info-window h3 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.info-window img {
+  width: 100%;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+.info-window p {
+  margin-top: 8px;
+}
+
+.info-window ul {
+  padding-left: 16px;
+  margin: 12px 0;
+}
+
+.map-links-container {
+  display: grid;
+  gap: 6px;
+}
+
+.map-links-container a {
+  background-color: #38a169;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
