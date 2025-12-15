@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sawyer Camp Farmers Common Initiative Group Website
 
-## Getting Started
+![Sawyer Camp Screenshot](https://ik.imagekit.io/thormars/Sawyer-Camp/sawyer-camp-thumbnail.png)
 
-First, run the development server:
+The Sawyer Camp Farmers Common Initiative Group (SCFCIG) is a community-driven initiative that supports sustainable farming and empowers local farmers in Banga Bakundu, Cameroon. This website serves as a digital hub for the organization, enhancing user engagement, membership sign-ups, and secure donations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+##  Live Demo
+🔗 **[Website](https://sawyercamp.thomastepi.com)**  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## About the Project
 
-## Learn More
+This project aims to:
 
-To learn more about Next.js, take a look at the following resources:
+- Increase visibility for SCFCIG’s work in sustainable agriculture.
+- Facilitate membership and volunteer registrations for farmers and supporters.
+- Enable secure donations to fund farming programs, school tuition aid, and rural development.
+- Provide real-time location visualization for Sawyer Camp’s farming network.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Key Features:
 
-## Deploy on Vercel
+- **Dynamic Membership Registration:** Farmers and supporters can join SCFCIG through an interactive form.
+- **Secure Online Donations:** Supports payments via PayPal.
+- **Google Maps Integration:** Showcases Sawyer Camp’s farms and community outreach locations.
+- **News & Blog Section:** Shares updates about farming projects, community work, and sustainability initiatives.
+- **Eco-Friendly Farming Information:** Educates users about organic farming, sustainability, and agroforestry.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack:
+
+- **Frontend:** React.js, Redux Toolkit (state management), Formik (forms)
+- **UI Framework:** Chakra UI
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Payment Processing:** PayPal API
+- **Hosting:** Render (Frontend), Heroku (Backend)
