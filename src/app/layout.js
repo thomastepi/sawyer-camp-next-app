@@ -40,7 +40,7 @@ export const metadata = {
   },
 
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.ico",
   },
 
   robots: {

@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
     return notFound();
   }
   return {
-    title: project.title,
+    title: project.name,
     description: project.description?.slice(0, 160),
     alternates: { canonical: `/projects/${project.slug}` },
     openGraph: {

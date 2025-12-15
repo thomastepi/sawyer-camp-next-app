@@ -3,7 +3,7 @@ import ProjectPage from "@/scenes/projects/projects";
 
 export const metadata = {
   title: "Projects",
-  description: "Sawyer Camp Farmers Common Initiative Group (CIG) projects",
+  description: "Discover our diverse range of projects showcasing innovation and excellence.",
 };
 
 const Projects = () => {
