@@ -4,7 +4,7 @@ import ProviderWrapper from "@/lib/providers/wrapper";
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://sawyercamp.thomastepi.com"),
+  metadataBase: new URL("https://www.sawyercampfarmers.org/"),
 
   title: {
     default: "Sawyer Camp Farmers CIG",
@@ -93,9 +93,9 @@ export default function RootLayout({ children }) {
               "@graph": [
                 {
                   "@type": "Organization",
-                  "@id": "https://sawyercamp.thomastepi.com/#organization",
+                  "@id": "https://www.sawyercampfarmers.org/#organization",
                   name: "Sawyer Camp Farmers CIG",
-                  url: "https://sawyercamp.thomastepi.com",
+                  url: "https://www.sawyercampfarmers.org",
                   description:
                     "Sawyer Camp Farmers Common Initiative Group (CIG) empowers farmers in Banga Bakundu, Cameroon with sustainable agriculture practices and economic opportunities.",
                   logo: {
@@ -113,11 +113,11 @@ export default function RootLayout({ children }) {
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "https://sawyercamp.thomastepi.com/#website",
-                  url: "https://sawyercamp.thomastepi.com",
+                  "@id": "https://www.sawyercampfarmers.org/#website",
+                  url: "https://www.sawyercampfarmers.org",
                   name: "Sawyer Camp Farmers CIG",
                   publisher: {
-                    "@id": "https://sawyercamp.thomastepi.com/#organization",
+                    "@id": "https://www.sawyercampfarmers.org/#organization",
                   },
                   inLanguage: "en",
                 },

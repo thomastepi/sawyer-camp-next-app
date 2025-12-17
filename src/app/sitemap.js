@@ -1,7 +1,7 @@
 import { articles } from "@/data/blogArticles";
 import projects from "@/data/projects";
 
-const URL = "https://sawyercamp.thomastepi.com";
+const URL = "https://www.sawyercampfarmers.org";
 
 export default function sitemap() {
   const articlesRoutes = articles.map((article) => ({

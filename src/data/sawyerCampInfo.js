@@ -9,7 +9,7 @@ export const farmInfo = {
   address: "Banga Bakundu, South West, Cameroon",
   phone: "+1 214 431 4816",
   whatsapp: "https://wa.me/12144314816",
-  website: "https://sawyercamp.thomastepi.com",
+  website: "https://www.sawyercampfarmers.org",
   imageUrl: "https://ik.imagekit.io/thormars/Sawyer-Camp/cones-crop.jpg",
   crops: ["Oil Palm", "Cocoa", "Coffee", "etc"],
   areaHectares: 200,
