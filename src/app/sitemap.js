@@ -6,7 +6,7 @@ const URL = "https://sawyercamp.thomastepi.com";
 export default function sitemap() {
   const articlesRoutes = articles.map((article) => ({
     url: `${URL}/blog/${article.slug}`,
-    lastModified: new Date().toISOString(),
+    lastModified: new Date(article.date).toISOString(),
   }));
 
   const projectsRoutes = projects.map((project) => ({

@@ -6,7 +6,7 @@ const projects = [
     location: "Banga-Bakundu, Cameroon",
     image: "https://ik.imagekit.io/thormars/Sawyer-Camp/community-farming.jpg",
     summary:
-      "Empowering local families by providing them with land and resources for subsistence farming to combat food insecurity.",
+      "Addressing critical farmland scarcity and degradation by providing local families with land, resources, and training for sustainable subsistence farming.",
     article: [
       {
         type: "paragraph",
@@ -66,7 +66,7 @@ const projects = [
     location: "Banga-Bakundu, Cameroon",
     image: "https://ik.imagekit.io/thormars/Sawyer-Camp/seedling.webp",
     summary:
-      "Boosting crop yields and promoting sustainable agriculture by providing high-quality seedlings to local farmers.",
+      "Helping farmers escape the 'profitability trap' by providing free, high-quality cocoa and coffee seedlings to boost yields and promote long-term income stability.",
     article: [
       {
         type: "paragraph",
@@ -126,7 +126,7 @@ const projects = [
     location: "Sawyer Camp, Banga-Bakundu, Cameroon",
     image: "https://ik.imagekit.io/thormars/Sawyer-Camp/palm-oil-bottle.jpg",
     summary:
-      "Expanding our palm oil production with a commitment to zero-deforestation and high-yield, low-impact practices.",
+      "Combating destructive 'slash and burn' cycles by implementing zero-deforestation palm oil production on degraded land, promoting a sustainable alternative.",
     article: [
       {
         type: "paragraph",

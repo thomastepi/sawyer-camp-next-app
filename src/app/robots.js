@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.sawyercamp.com/sitemap.xml",
+    sitemap: "https://sawyercamp.thomastepi.com/sitemap.xml",
   };
 }

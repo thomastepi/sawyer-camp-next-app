@@ -44,10 +44,10 @@ const AboutUsPage = () => {
               Building a Sustainable Future Together
             </Heading>
             <Text fontSize="lg" color="brand.800">
-              Founded in 1989 by Mr. Emmanuel Atud, Sawyer Camp Farmers CIG was
+              Founded in 1989 by Ni Emmanuel Tepi, Sawyer Camp Farmers CIG was
               born out of a vision to empower rural communities through
               sustainable agriculture. With a Master's degree in Agricultural
-              Economics, Mr. Atud recognized the transformative power of
+              Economics, Ni Emmanuel recognized the transformative power of
               education, collaboration, and resource access in uplifting local
               farmers.
             </Text>
@@ -94,12 +94,10 @@ const AboutUsPage = () => {
                 Our Story
               </Heading>
               <Text color="brand.800" fontSize="lg" mb={4}>
-                For years, our rural communities faced mounting challenges:
-                climate change, biodiversity loss, and rural poverty. Instead of
-                standing by, we took action. As a united community-based
-                organization, Sawyer Camp Farmers CIG turned these challenges
-                into opportunities, equipping farmers with the tools and
-                knowledge to adapt, grow, and prosper.
+                Farmers in our home of Banga Bakundu face a complex web of challenges. Destructive, fire-based land clearing depletes soil nutrients and destroys neighboring farms. Regional insecurity has displaced hundreds, disrupting planting cycles and forcing the abandonment of farmland. A critical scarcity of viable farmland, coupled with a lack of access to financing for modern tools, traps farmers in a cycle of low yields and high risk. Poor roads and storage facilities lead to significant post-harvest losses, while climate change makes rain-fed agriculture increasingly precarious.
+              </Text>
+              <Text color="brand.800" fontSize="lg" mb={4}>
+                Instead of standing by, we took action. As a united community-based organization, Sawyer Camp Farmers CIG confronts these challenges head-on, equipping farmers with the tools and knowledge to adapt, grow, and build a resilient future.
               </Text>
               <Text color="brand.800" fontSize="lg">
                 Today, Sawyer Camp Farmers CIG is a thriving collective of

@@ -1,6 +1,6 @@
 const team = [
   {
-    name: "Emmanuel Atud",
+    name: "Ni Emmanuel Tepi",
     title: "President",
     image: "https://ik.imagekit.io/thormars/Sawyer-Camp/ni.jpg",
   },
