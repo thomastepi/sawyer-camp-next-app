@@ -38,7 +38,7 @@ const RegisterPage = () => {
           <Box w="30%" m="0 auto">
             <Image src={logoUrl} alt="Sawyer Camp Farmers CIG Logo" />
           </Box>
-          <Heading size="lg" color="brand.900" textAlign="center">
+          <Heading as="h1" size="lg" color="brand.900" textAlign="center">
             Register
           </Heading>
           <Divider borderColor="brand.700" />

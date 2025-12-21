@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { Box, Heading, Center } from "@chakra-ui/react";
+import { Box, Heading, Center, Text } from "@chakra-ui/react";
 
 const defaultImg = "https://ik.imagekit.io/thormars/Sawyer-Camp/nature.jpg";
 
-const PageHeader = ({ image, title }) => {
+const PageHeader = ({ image, title, subtitle }) => {
   return (
     <Box
       bgImage={image || defaultImg}
@@ -30,9 +30,14 @@ const PageHeader = ({ image, title }) => {
       />
 
       <Center zIndex="2">
-        <Heading size="4xl" textAlign="center">
+        <Heading as="h1" size="4xl" textAlign="center">
           {title}
         </Heading>
+        {subtitle && (
+          <Text mt={4} fontSize="xl" textAlign="center">
+            {subtitle}
+          </Text>
+        )}
       </Center>
     </Box>
   );

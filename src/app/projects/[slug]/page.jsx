@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
   }
   return {
     title: project.name,
-    description: project.description?.slice(0, 160),
+    description: project.summary?.slice(0, 160),
     alternates: { canonical: `/projects/${project.slug}` },
     openGraph: {
       title: project.title,
