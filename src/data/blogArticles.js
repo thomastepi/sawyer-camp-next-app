@@ -3,7 +3,7 @@ export const articles = [
     id: 1,
     slug: "summer-work-opportunities",
     metadata: {
-      title: "Summer Work Opportunities at SCF-CIG",
+      title: "Summer Work Opportunities",
       description:
         "Discover exciting summer work opportunities for students in Banga-Bakundu to earn an income, develop valuable skills, and contribute to the community.",
       imageUrl: "https://ik.imagekit.io/thormars/Sawyer-Camp/holiday-hire.jpg",
@@ -62,7 +62,7 @@ export const articles = [
     id: 2,
     slug: "supporting-recovery-and-resilience",
     metadata: {
-      title: "Supporting Recovery and Resilience at SCF-CIG",
+      title: "Supporting Recovery and Resilience",
       description:
         "A Call to Action: Supporting Recovery and Resilience at Sawyer Camp Farmers CIG",
       imageUrl: "https://ik.imagekit.io/thormars/Sawyer-Camp/fire-incident.jpg",
@@ -116,7 +116,7 @@ export const articles = [
     id: 3,
     slug: "resilience-in-uncertain-times",
     metadata: {
-      title: "Blog - Resilience in Uncertain Times",
+      title: "Resilience in Uncertain Times",
       description:
         "Resilience in Uncertain Times: Navigating Operational Challenges at Sawyer Camp",
       imageUrl: "https://ik.imagekit.io/thormars/Sawyer-Camp/banga-bakundu.jpg",

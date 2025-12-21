@@ -107,7 +107,7 @@ const FarmDoctorPage = () => {
             Farmer-focused AI
           </Badge>
 
-          <Heading as="h1" size="2xl" color="brand.900">
+          <Heading size="2xl" color="brand.900">
             AI-Powered Farm Doctor
           </Heading>
 

@@ -77,7 +77,7 @@ const AICropPlannerPage = () => {
             <Tag colorScheme="green" borderRadius="full" px={3} py={1}>
               AI-Powered Planning
             </Tag>
-            <Heading as="h1" size="xl" color="brand.900">
+            <Heading size="xl" color="brand.900">
               Plan smarter, plant with confidence
             </Heading>
             <Text fontSize="md" color="brand.800">
