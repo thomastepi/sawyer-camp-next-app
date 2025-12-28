@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ContactUsPage from "@/scenes/contact";
 
 export const metadata = {
@@ -7,9 +8,9 @@ export const metadata = {
 
 const ContactUs = () => {
   return (
-    <>
+    <Suspense fallback={<div>Loading…</div>}>
       <ContactUsPage />
-    </>
+    </Suspense>
   );
 };
 
