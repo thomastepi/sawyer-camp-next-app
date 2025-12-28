@@ -1,5 +1,6 @@
 import { articles } from "@/data/blogArticles";
 import projects from "@/data/projects";
+import { products } from "@/data/products";
 
 const URL = "https://www.sawyercampfarmers.org";
 
@@ -11,6 +12,11 @@ export default function sitemap() {
 
   const projectsRoutes = projects.map((project) => ({
     url: `${URL}/projects/${project.slug}`,
+    lastModified: new Date().toISOString(),
+  }));
+
+  const productsRoutes = products.map((product) => ({
+    url: `${URL}/products/${product.slug}`,
     lastModified: new Date().toISOString(),
   }));
 
@@ -28,11 +34,14 @@ export default function sitemap() {
     "/farm-tools",
     "/our-work",
     "/projects",
+    "/products",
     "/volunteer",
+    "/signin",
+    "/register",
   ].map((route) => ({
     url: `${URL}${route}`,
     lastModified: new Date().toISOString(),
   }));
 
-  return [...staticRoutes, ...articlesRoutes, ...projectsRoutes];
+  return [...staticRoutes, ...articlesRoutes, ...projectsRoutes, ...productsRoutes];
 }
