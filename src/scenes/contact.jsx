@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import validator from "validator";
 import GoogleMaps from "@/components/googleMaps/googleMaps";
 import DisplayAlert from "@/components/alert/customAlert";
@@ -11,6 +11,7 @@ import { setName, setEmail, setMessage } from "@/redux/features/contactSlice";
 import { submitContactUs } from "@/redux/features/contactSlice";
 import { SOCIAL_LINKS } from "@/data/socialLinks";
 import { CONTACT_INFO } from "@/data/contactInfo";
+import { useSearchParams } from "next/navigation";
 import {
   Box,
   Text,
@@ -110,9 +111,21 @@ const ContactUsPage = () => {
   const dispatch = useDispatch();
   const { isLoading, status, show } = useSelector((state) => state.contactUs);
   const alert = useSelector((state) => state.alert);
+  const searchParams = useSearchParams();
+
+  const prefilledMessage = useMemo(() => {
+    const productName = searchParams.get("product");
+    if (!productName) return "";
+
+    const normalizedName = productName.trim();
+    if (!normalizedName) return "";
+
+    return `Hi Sawyer Camp, I'm interested in ${normalizedName}. Can you share pricing, availability, and lead time?`;
+  }, [searchParams]);
 
   const formik = useFormik({
-    initialValues: { name: "", email: "", message: "" },
+    initialValues: { name: "", email: "", message: prefilledMessage },
+    enableReinitialize: true,
     validationSchema: Yup.object({
       name: Yup.string().required("Name is required"),
       email: Yup.string()

@@ -7,6 +7,7 @@ import {
   HStack,
   Link as ChakraLink,
   Button,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import navLinks from "@/data/navLinks";
@@ -16,6 +17,7 @@ const logoUrl =
   "https://ik.imagekit.io/thormars/Sawyer-Camp/offWhite-logo.jpeg?tr=w-300,h-300";
 
 const Navbar = () => {
+  const [isWide] = useMediaQuery("(min-width: 1200px)");
   return (
     <Box bg="brand.400" py={2} px={4} boxShadow="sm">
       <Flex
@@ -29,7 +31,7 @@ const Navbar = () => {
             <Image src={logoUrl} alt="logo" h="50px" />
           </Link>
 
-          <HStack spacing={6} display={{ base: "none", md: "flex" }}>
+          <HStack spacing={6} display={`${isWide ? "flex" : "none"}`}>
             {navLinks
               .filter((link) => !link.flag)
               .map((link) => (
@@ -46,14 +48,14 @@ const Navbar = () => {
           </HStack>
         </HStack>
 
-        <Box display={{ base: "block", md: "none" }}>
+        <Box display={`${isWide ? "none" : "block"}`}>
           <DrawerPanel />
         </Box>
 
         <HStack
           spacing={4}
           alignItems="center"
-          display={{ base: "none", md: "flex" }}
+          display={`${isWide ? "flex" : "none"}`}
         >
           <ChakraLink as={Link} href="/signin" fontWeight="medium">
             Sign In

@@ -38,6 +38,15 @@ const DrawerPanel = () => {
             <Box py={4}>
               <Box color="green">
                 <VStack spacing={7}>
+                  <Button
+                    as={Link}
+                    href="/donate"
+                    variant="solid"
+                    colorScheme="green"
+                    onClick={onClose}
+                  >
+                    Donate
+                  </Button>
                   {navLinks.map((link, index) => (
                     <Link key={index} href={link.path}>
                       <Text onClick={onClose}>{link.name}</Text>
