@@ -1,5 +1,5 @@
 const navLinks = [
-  { name: "Home", path: "/" },
+  { name: "Home", path: "/", flag: true },
   { name: "About Us", path: "/about-us" },
   { name: "Our Work", path: "/our-work" },
   { name: "Products", path: "/products" },

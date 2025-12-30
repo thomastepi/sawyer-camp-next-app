@@ -27,7 +27,7 @@ const Navbar = () => {
         justifyContent="space-between"
       >
         <HStack spacing={8} alignItems="center">
-          <Link href="/">
+          <Link href="/" aria-label="go to home page">
             <Image src={logoUrl} alt="logo" h="50px" />
           </Link>
 
