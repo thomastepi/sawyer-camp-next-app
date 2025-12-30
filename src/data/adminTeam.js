@@ -5,14 +5,9 @@ const team = [
     image: "https://ik.imagekit.io/thormars/Sawyer-Camp/ni.jpg",
   },
   {
-    name: "Lanita Teke",
+    name: "Geoffrey Atud",
     title: "Vice President",
-    image: "https://ik.imagekit.io/thormars/Sawyer-Camp/lan.jpg",
-  },
-  {
-    name: "Asanga-Fombe",
-    title: "Membership Coordinator",
-    image: "https://ik.imagekit.io/thormars/Sawyer-Camp/fombe.jpg",
+    image: "https://ik.imagekit.io/thormars/Sawyer-Camp/geoffrey.jpg",
   },
   {
     name: "Ayisatu Mbah",
@@ -21,13 +16,18 @@ const team = [
   },
   {
     name: "Glory Esubu",
-    title: "Marketting & Outreach Coordinator",
+    title: "Marketting & Outreach",
     image: "https://ik.imagekit.io/thormars/Sawyer-Camp/glory.jpg",
   },
   {
-    name: "Schneider Kimbeng",
+    name: "Lanita Teke",
+    title: "Membership Coordinator",
+    image: "https://ik.imagekit.io/thormars/Sawyer-Camp/lan.jpg",
+  },
+  {
+    name: "Ngafor Njeik",
     title: "Resource Coordinator",
-    image: "https://ik.imagekit.io/thormars/Sawyer-Camp/schnei.jpg",
+    image: "https://ik.imagekit.io/thormars/Sawyer-Camp/ngoh.jpg",
   },
 ];
 
