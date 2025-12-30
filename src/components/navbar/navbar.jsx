@@ -60,9 +60,9 @@ const Navbar = () => {
           <ChakraLink as={Link} href="/signin" fontWeight="medium">
             Sign In
           </ChakraLink>
-          <ChakraLink as={Link} href="/become-a-member" fontWeight="medium">
+          {/* <ChakraLink as={Link} href="/become-a-member" fontWeight="medium">
             Become a Member
-          </ChakraLink>
+          </ChakraLink> */}
           <Button as={Link} href="/donate" variant="solid" colorScheme="green">
             Donate
           </Button>
