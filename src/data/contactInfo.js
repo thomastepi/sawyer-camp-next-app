@@ -1,3 +1,3 @@
 export const CONTACT_INFO = {
-  EMAIL: "contact@sawyercampfarmers.org",
+  EMAIL: "email.sawyercamp@gmail.com",
 };

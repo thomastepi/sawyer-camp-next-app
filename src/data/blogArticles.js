@@ -54,7 +54,7 @@ export const articles = [
       {
         type: "paragraph",
         content:
-          "We encourage all interested students to submit an application by contacting info@sawyercamp.com. Don't miss this opportunity to gain valuable experience, earn some income, and be part of something special this summer!",
+          "We encourage all interested students to submit an application by contacting email.sawyercamp@gmail.com. Don't miss this opportunity to gain valuable experience, earn some income, and be part of something special this summer!",
       },
     ],
   },
