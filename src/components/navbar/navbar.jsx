@@ -1,16 +1,20 @@
 "use client";
 import {
   Box,
-  Text,
   Flex,
   Image,
   HStack,
   Link as ChakraLink,
   Button,
   useMediaQuery,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 import Link from "next/link";
-import navLinks from "@/data/navLinks";
+import { navGroups } from "@/data/navLinks";
 import DrawerPanel from "../mobileNavigation/drawerComponent";
 
 const logoUrl =
@@ -26,46 +30,72 @@ const Navbar = () => {
         alignItems="center"
         justifyContent="space-between"
       >
-        <HStack spacing={8} alignItems="center">
+        <HStack
+          w="100%"
+          spacing={8}
+          alignItems="center"
+          justifyContent="space-between"
+        >
           <Link href="/" aria-label="go to home page">
             <Image src={logoUrl} alt="logo" h="50px" />
           </Link>
 
-          <HStack spacing={6} display={`${isWide ? "flex" : "none"}`}>
-            {navLinks
-              .filter((link) => !link.flag)
-              .map((link) => (
-                <ChakraLink
-                  as={Link}
-                  key={link.path}
-                  href={link.path}
+          <HStack spacing={2} display={`${isWide ? "flex" : "none"}`}>
+            {navGroups.map((group) => (
+              <Menu key={group.label} placement="bottom-start">
+                <MenuButton
+                  as={Button}
+                  variant="ghost"
+                  rightIcon={<ChevronDownIcon />}
                   fontWeight="medium"
-                  _hover={{ color: "brand.700" }}
+                  color="brand.900"
+                  _hover={{ bg: "brand.300", color: "brand.700" }}
+                  _active={{ bg: "brand.300" }}
                 >
-                  <Text>{link.name}</Text>
-                </ChakraLink>
-              ))}
+                  {group.label}
+                </MenuButton>
+                <MenuList bg="white" borderColor="brand.300" py={2}>
+                  {group.links.map((link) => (
+                    <MenuItem
+                      as={Link}
+                      key={link.path}
+                      href={link.path}
+                      color="brand.900"
+                      _hover={{
+                        bg: "brand.400",
+                        color: "brand.700",
+                        textDecoration: "none",
+                      }}
+                    >
+                      {link.name}
+                    </MenuItem>
+                  ))}
+                </MenuList>
+              </Menu>
+            ))}
           </HStack>
-        </HStack>
 
-        <Box display={`${isWide ? "none" : "block"}`}>
-          <DrawerPanel />
-        </Box>
+          <Box display={`${isWide ? "none" : "block"}`}>
+            <DrawerPanel />
+          </Box>
 
-        <HStack
-          spacing={4}
-          alignItems="center"
-          display={`${isWide ? "flex" : "none"}`}
-        >
-          <ChakraLink as={Link} href="/signin" fontWeight="medium">
-            Sign In
-          </ChakraLink>
-          {/* <ChakraLink as={Link} href="/become-a-member" fontWeight="medium">
-            Become a Member
-          </ChakraLink> */}
-          <Button as={Link} href="/donate" variant="solid" colorScheme="green">
-            Donate
-          </Button>
+          <HStack
+            spacing={4}
+            alignItems="center"
+            display={`${isWide ? "flex" : "none"}`}
+          >
+            <ChakraLink as={Link} href="/signin" fontWeight="medium">
+              Sign In
+            </ChakraLink>
+            <Button
+              as={Link}
+              href="/donate"
+              variant="solid"
+              colorScheme="green"
+            >
+              Donate
+            </Button>
+          </HStack>
         </HStack>
       </Flex>
     </Box>

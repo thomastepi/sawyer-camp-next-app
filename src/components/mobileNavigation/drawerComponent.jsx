@@ -12,9 +12,11 @@ import {
   VStack,
   Button,
   Text,
+  Divider,
+  Link as ChakraLink,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import navLinks from "@/data/navLinks";
+import { navGroups } from "@/data/navLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const DrawerPanel = () => {
@@ -36,8 +38,8 @@ const DrawerPanel = () => {
           <DrawerCloseButton padding={5} size={3} color="green" />
           <DrawerBody marginTop={20}>
             <Box py={4}>
-              <Box color="green">
-                <VStack spacing={7}>
+              <Box color="brand.900">
+                <VStack spacing={7} align="stretch">
                   <Button
                     as={Link}
                     href="/donate"
@@ -47,10 +49,34 @@ const DrawerPanel = () => {
                   >
                     Donate
                   </Button>
-                  {navLinks.map((link, index) => (
-                    <Link key={index} href={link.path}>
-                      <Text onClick={onClose}>{link.name}</Text>
-                    </Link>
+                  <ChakraLink as={Link} href="/" onClick={onClose}>
+                    Home
+                  </ChakraLink>
+                  <ChakraLink as={Link} href="/signin" onClick={onClose}>
+                    Sign In
+                  </ChakraLink>
+                  <Divider borderColor="brand.700" />
+                  {navGroups.map((group) => (
+                    <VStack key={group.label} align="stretch" spacing={3}>
+                      <Text
+                        color="brand.800"
+                        fontSize="sm"
+                        fontWeight="bold"
+                        textTransform="uppercase"
+                      >
+                        {group.label}
+                      </Text>
+                      {group.links.map((link) => (
+                        <ChakraLink
+                          as={Link}
+                          key={link.path}
+                          href={link.path}
+                          onClick={onClose}
+                        >
+                          {link.name}
+                        </ChakraLink>
+                      ))}
+                    </VStack>
                   ))}
                 </VStack>
               </Box>

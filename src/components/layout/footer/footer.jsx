@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
@@ -8,7 +7,7 @@ import {
   faFacebook,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import navLinks from "@/data/navLinks";
+import { navGroups } from "@/data/navLinks";
 import {
   HStack,
   VStack,
@@ -18,6 +17,7 @@ import {
   Flex,
   Center,
   Button,
+  SimpleGrid,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { SOCIAL_LINKS } from "@/data/socialLinks";
@@ -25,7 +25,6 @@ import { CONTACT_INFO } from "@/data/contactInfo";
 
 const Footer = () => {
   const isMobileView = useBreakpointValue({ base: true, md: false });
-  const router = useRouter();
   return (
     <footer>
       <Center
@@ -41,23 +40,34 @@ const Footer = () => {
           justify="space-between"
           direction={{ base: "column", md: "row" }}
         >
-          <Box mb={{ base: "40px", md: "0" }}>
-            <VStack align={{ base: "center", md: "flex-start" }} spacing={4}>
-              {navLinks
-                .filter((link) => !link.flag)
-                .map((link, index) => (
+          <SimpleGrid
+            columns={{ base: 1, sm: 3 }}
+            spacing={{ base: 8, md: 10 }}
+            mb={{ base: "40px", md: "0" }}
+          >
+            {navGroups.map((group) => (
+              <VStack
+                key={group.label}
+                align={{ base: "center", md: "flex-start" }}
+                spacing={3}
+              >
+                <Text fontWeight="bold" fontSize="lg">
+                  {group.label}
+                </Text>
+                {group.links.map((link) => (
                   <ChakraLink
                     as={Link}
                     href={link.path}
-                    key={index}
-                    fontWeight="bold"
+                    key={link.path}
+                    fontWeight="medium"
                     _hover={{ color: "brand.700" }}
                   >
                     {link.name}
                   </ChakraLink>
                 ))}
-            </VStack>
-          </Box>
+              </VStack>
+            ))}
+          </SimpleGrid>
           <Box
             mb={{ base: "30px", md: "0" }}
             display="flex"
@@ -68,7 +78,8 @@ const Footer = () => {
                 Support Our Mission
               </Text>
               <Button
-                onClick={() => router.push("/donate")}
+                as={Link}
+                href="/donate"
                 variant="solid"
                 size="md"
               >
