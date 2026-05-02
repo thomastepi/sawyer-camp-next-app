@@ -1,5 +1,5 @@
 "use client";
-import { PopupButton } from "@typeform/embed-react";
+import dynamic from "next/dynamic";
 import {
   Box,
   VStack,
@@ -48,9 +48,12 @@ const RoleCard = ({ role }) => {
   );
 };
 
-const VolunteerPage = () => {
-  const id = process.env.NEXT_PUBLIC_TYPEFORM_ID_VOLUNTEER;
+const TypeformPopupButton = dynamic(
+  () => import("@typeform/embed-react").then((mod) => mod.PopupButton),
+  { ssr: false }
+);
 
+const VolunteerPage = ({ typeformId }) => {
   return (
     <Box>
       <PageHeader title="Volunteer with Us" image={headerImage} />
@@ -93,9 +96,9 @@ const VolunteerPage = () => {
             sustainable future for our community.
           </Text>
           <Button as="div" size="lg" colorScheme="green">
-            <PopupButton id={id} style={{ fontSize: 20 }} className="my-button">
+            <TypeformPopupButton id={typeformId}>
               Sign Up To Volunteer
-            </PopupButton>
+            </TypeformPopupButton>
           </Button>
         </VStack>
       </Container>

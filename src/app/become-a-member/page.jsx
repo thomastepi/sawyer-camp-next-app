@@ -7,5 +7,5 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <MembershipPage />;
+  return <MembershipPage typeformId={process.env.TYPEFORM_ID} />;
 }

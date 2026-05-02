@@ -4,10 +4,10 @@ import PayPalProvider from "./paypal.provider";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
 
-const ProviderWrapper = ({ children }) => {
+const ProviderWrapper = ({ children, paypalClientId }) => {
   return (
     <ChakraUIProvider>
-      <PayPalProvider>
+      <PayPalProvider paypalClientId={paypalClientId}>
         <Provider store={store}>{children}</Provider>
       </PayPalProvider>
     </ChakraUIProvider>

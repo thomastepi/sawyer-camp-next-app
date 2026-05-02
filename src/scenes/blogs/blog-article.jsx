@@ -77,12 +77,10 @@ const OtherArticleCard = ({ article }) => {
 };
 
 const ArticlePage = ({ slug }) => {
-  console.log("params/slug: ", slug);
   const article = articles.find((item) => item.slug === slug);
 
   const otherArticles = articles
     .filter((item) => item.slug !== slug)
-    .sort(() => 0.5 - Math.random())
     .slice(0, 3);
 
   if (!article) {

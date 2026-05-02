@@ -46,7 +46,7 @@ const AboutUsPage = () => {
             <Text fontSize="lg" color="brand.800">
               Founded in 1989 by Ni Emmanuel Tepi, Sawyer Camp Farmers CIG was
               born out of a vision to empower rural communities through
-              sustainable agriculture. With a Master's degree in Agricultural
+              sustainable agriculture. With a Master&apos;s degree in Agricultural
               Economics, Ni Emmanuel recognized the transformative power of
               education, collaboration, and resource access in uplifting local
               farmers.

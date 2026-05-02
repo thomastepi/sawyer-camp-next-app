@@ -72,7 +72,7 @@ const SigninPage = () => {
             Login
           </Button>
           <Text color="brand.800">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link
               href="/register"
               style={{

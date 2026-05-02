@@ -3,7 +3,7 @@ import HomePage from "@/scenes/home";
 const Home = () => {
   return (
     <>
-      <HomePage />
+      <HomePage googleMapsApiKey={process.env.GOOGLE_MAPS_API_KEY} />
     </>
   );
 };

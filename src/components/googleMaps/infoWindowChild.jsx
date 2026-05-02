@@ -1,3 +1,4 @@
+import { Image } from "@chakra-ui/react";
 import { mapsLinks } from "@/utils/googleMapsFarmLink";
 import s from "./googleMaps.module.css";
 
@@ -7,7 +8,7 @@ const InfoWindowChild = ({ selectedMarker }) => {
       <h3>{selectedMarker.name}</h3>
       <small>{selectedMarker.subtitle}</small>
       {selectedMarker.imageUrl && (
-        <img src={selectedMarker.imageUrl} alt={selectedMarker.name} />
+        <Image src={selectedMarker.imageUrl} alt={selectedMarker.name} />
       )}
       <p>{selectedMarker.description}</p>
       <ul>

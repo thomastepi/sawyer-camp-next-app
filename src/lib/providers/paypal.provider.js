@@ -1,14 +1,17 @@
 "use client";
-import React from "react";
+import React, { useMemo } from "react";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
-const initialOptions = {
-  "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
-  currency: "USD",
-  intent: "capture",
-};
+const PayPalProvider = ({ children, paypalClientId }) => {
+  const initialOptions = useMemo(
+    () => ({
+      "client-id": paypalClientId,
+      currency: "USD",
+      intent: "capture",
+    }),
+    [paypalClientId]
+  );
 
-const PayPalProvider = ({ children }) => {
   return (
     <PayPalScriptProvider options={initialOptions}>
       {children}

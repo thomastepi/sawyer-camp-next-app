@@ -89,7 +89,6 @@ const OtherProjectCard = ({ project }) => {
 const ProjectDetailPage = ({ project }) => {
   const otherProjects = projects
     .filter((p) => p.id !== parseInt(project.id))
-    .sort(() => 0.5 - Math.random())
     .slice(0, 3);
 
   if (!project) {

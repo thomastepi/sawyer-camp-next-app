@@ -16,10 +16,10 @@ const containerStyle = {
 
 const center = f.position;
 
-function MapWithInfoWindow() {
+function MapWithInfoWindow({ googleMapsApiKey }) {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey,
   });
 
   const [selectedMarker, setSelectedMarker] = useState(null);

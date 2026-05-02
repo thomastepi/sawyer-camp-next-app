@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { PopupButton } from "@typeform/embed-react";
+import dynamic from "next/dynamic";
 import {
   Box,
   Text,
@@ -18,9 +18,12 @@ const img = "https://ik.imagekit.io/thormars/Sawyer-Camp/corn-farm.jpg";
 const membershipImage =
   "https://ik.imagekit.io/thormars/Sawyer-Camp/ayisatu.jpg";
 
-function MembershipPage() {
-  const id = process.env.NEXT_PUBLIC_TYPEFORM_ID;
+const TypeformPopupButton = dynamic(
+  () => import("@typeform/embed-react").then((mod) => mod.PopupButton),
+  { ssr: false }
+);
 
+function MembershipPage({ typeformId }) {
   return (
     <Box>
       <PageHeader image={img} title="Join Our Community" />
@@ -67,13 +70,9 @@ function MembershipPage() {
               </ListItem>
             </UnorderedList>
             <Button as="div" size="lg" colorScheme="green" mt={4}>
-              <PopupButton
-                id={id}
-                style={{ fontSize: 20 }}
-                className="my-button"
-              >
+              <TypeformPopupButton id={typeformId}>
                 Become a Member
-              </PopupButton>
+              </TypeformPopupButton>
             </Button>
           </VStack>
           <Box>

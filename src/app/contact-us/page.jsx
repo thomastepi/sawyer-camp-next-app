@@ -9,7 +9,7 @@ export const metadata = {
 const ContactUs = () => {
   return (
     <Suspense fallback={<div>Loading…</div>}>
-      <ContactUsPage />
+      <ContactUsPage googleMapsApiKey={process.env.GOOGLE_MAPS_API_KEY} />
     </Suspense>
   );
 };

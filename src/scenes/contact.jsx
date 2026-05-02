@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useMemo } from "react";
+import dynamic from "next/dynamic";
 import validator from "validator";
-import GoogleMaps from "@/components/googleMaps/googleMaps";
 import DisplayAlert from "@/components/alert/customAlert";
 import PageHeader from "@/components/pageHeader/pageHeader";
 import { useFormik } from "formik";
@@ -41,6 +41,10 @@ import {
 
 const headerImage =
   "https://ik.imagekit.io/thormars/Sawyer-Camp/green-leaf.jpg";
+
+const GoogleMaps = dynamic(() => import("@/components/googleMaps/googleMaps"), {
+  ssr: false,
+});
 
 const ContactInfo = () => (
   <VStack spacing={6} align="flex-start">
@@ -107,7 +111,7 @@ const ContactInfo = () => (
   </VStack>
 );
 
-const ContactUsPage = () => {
+const ContactUsPage = ({ googleMapsApiKey }) => {
   const dispatch = useDispatch();
   const { isLoading, status, show } = useSelector((state) => state.contactUs);
   const alert = useSelector((state) => state.alert);
@@ -165,10 +169,10 @@ const ContactUsPage = () => {
       <Container maxW="container.xl" py={16}>
         <VStack spacing={4} textAlign="center" mb={10}>
           <Heading as="h2" size="2xl" color="brand.900">
-            Let's Chat
+            Let&apos;s Chat
           </Heading>
           <Text fontSize="xl" maxW="3xl" color="brand.800">
-            We'd love to hear from you! Whether you have a question, a
+            We&apos;d love to hear from you! Whether you have a question, a
             suggestion, or want to partner with us, feel free to reach out.
           </Text>
         </VStack>
@@ -176,7 +180,7 @@ const ContactUsPage = () => {
           <VStack spacing={8} align="stretch">
             <ContactInfo />
             <Box h="400px" borderRadius="lg" overflow="hidden">
-              <GoogleMaps />
+              <GoogleMaps googleMapsApiKey={googleMapsApiKey} />
             </Box>
           </VStack>
           <Box bg="white" p={8} borderRadius="lg" boxShadow="md">

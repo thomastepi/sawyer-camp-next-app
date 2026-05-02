@@ -79,6 +79,8 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  const paypalClientId = process.env.PAYPAL_CLIENT_ID;
+
   return (
     <html lang="en">
       <head />
@@ -125,7 +127,7 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
-        <ProviderWrapper>
+        <ProviderWrapper paypalClientId={paypalClientId}>
           <MainLayout>{children}</MainLayout>
         </ProviderWrapper>
       </body>

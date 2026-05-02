@@ -1,14 +1,18 @@
 "use client";
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/home/hero/hero";
 import WhatWeDo from "@/components/home/whatWeDo/whatWeDo";
 import ImpactSection from "@/components/home/impact/impact";
 import Team from "@/components/home/team/team";
 import BlogArticleBox from "@/components/blogArticles/blogArticlesBox";
-import GoogleMaps from "@/components/googleMaps/googleMaps";
 import Subscribe from "@/components/subscribeForm/subscribe";
 import { Box, Container } from "@chakra-ui/react";
 
-const HomePage = () => {
+const GoogleMaps = dynamic(() => import("@/components/googleMaps/googleMaps"), {
+  ssr: false,
+});
+
+const HomePage = ({ googleMapsApiKey }) => {
   return (
     <Box>
       <HeroSection />
@@ -38,7 +42,7 @@ const HomePage = () => {
         </Container>
       </Box>
       <Box mt={16} bg="brand.400">
-        <GoogleMaps />
+        <GoogleMaps googleMapsApiKey={googleMapsApiKey} />
       </Box>
     </Box>
   );

@@ -39,8 +39,6 @@ const CheckoutPage = () => {
   const alert = useSelector((state) => state.alert);
   const alertRef = useRef(null);
 
-  const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
-
   useEffect(() => {
     if (alert.show && alertRef.current) {
       alertRef.current.scrollIntoView({ behavior: "smooth" });
@@ -58,7 +56,7 @@ const CheckoutPage = () => {
 
   const onCreateOrder = async (data, actions) => {
     try {
-      const response = await fetch(`${baseURL}/api/create-order`, {
+      const response = await fetch("/api/backend/api/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount, currency }),
@@ -94,7 +92,7 @@ const CheckoutPage = () => {
     }
     try {
       const response = await fetch(
-        `${baseURL}/api/capture-order/${data.orderID}`,
+        `/api/backend/api/capture-order/${data.orderID}`,
         {
           method: "POST",
         }
@@ -284,7 +282,7 @@ const CheckoutPage = () => {
                     </Text>
                   </VStack>
                   <Text mt={4} color="brand.700">
-                    Please include "Donation" in the reference/reason field.
+                    Please include &quot;Donation&quot; in the reference/reason field.
                   </Text>
                 </Box>
               )}
@@ -310,7 +308,7 @@ const CheckoutPage = () => {
               Considering a Larger Impact?
             </Heading>
             <Text fontSize="lg" maxW="2xl">
-              Your generosity inspires us! Let's discuss how your organization
+              Your generosity inspires us! Let&apos;s discuss how your organization
               can partner with us to make a lasting difference.
             </Text>
             <Button
